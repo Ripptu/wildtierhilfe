@@ -447,6 +447,8 @@ function HomePage() {
             playsInline
             autoPlay
             loop
+            preload="auto"
+            controls={false}
             className="w-full h-full object-cover"
           />
           {/* Gradient Overlay */}
