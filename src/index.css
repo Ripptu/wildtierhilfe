@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@import "./styles/fonts.css";
+@import "./styles/theme.css";
+
+@theme {
+  --color-brand-black: #000000;
+  --color-brand-gray: #3D3D3D;
+  --color-brand-white: #FFFFFF;
+  --color-brand-primary: #2A4838;
+  --color-brand-secondary: #456A54;
+
+  --font-display: "Instrument Serif", serif;
+  --font-body: "Inter", sans-serif;
+  
+  --animate-fade-rise: fade-rise 0.8s ease-out forwards;
+  --animate-fade-rise-delay: fade-rise 0.8s ease-out 0.2s forwards;
+  --animate-fade-rise-delay-2: fade-rise 0.8s ease-out 0.4s forwards;
+  
+  --scale-103: 1.03;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-white);
+  color: var(--color-brand-black);
+}
