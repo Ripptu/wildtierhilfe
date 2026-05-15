@@ -451,6 +451,8 @@ function HomePage() {
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-brand-white/70 via-transparent to-brand-white pointer-events-none"></div>
+          {/* Whitish Overlay for Desktop */}
+          <div className="absolute inset-0 hidden md:block bg-brand-white/40 pointer-events-none"></div>
         </div>
 
         {/* Hero Section */}
@@ -459,7 +461,7 @@ function HomePage() {
             className="text-5xl sm:text-7xl md:text-8xl max-w-7xl font-normal font-display text-brand-black animate-fade-rise opacity-0" 
             style={{ lineHeight: 0.95, letterSpacing: '-2.46px' }}
           >
-            <em className="text-brand-secondary italic">Gemeinsam</em> schenken wir <em className="text-brand-secondary italic">Hoffnung.</em>
+            <em className="text-brand-primary italic">Gemeinsam</em> schenken wir <em className="text-brand-primary italic">Hoffnung.</em>
           </h1>
           
           <p className="text-base sm:text-lg max-w-2xl mt-8 leading-relaxed text-brand-gray animate-fade-rise-delay opacity-0">

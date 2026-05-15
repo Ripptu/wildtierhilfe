@@ -1,6 +1,6 @@
 {
-  "name": "Aethera Studio",
-  "description": "Cinematic Hero Section with Looping Video Background",
+  "name": "Wildtier-Hilfe Initiative",
+  "description": "Website der Wildtier-Hilfe Initiative. Direkte, unbürokratische Hilfe für Wildtiere und Streunerkatzen.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
