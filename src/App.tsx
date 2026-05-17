@@ -490,7 +490,7 @@ function HomePage() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("DE12 3456 7890 1234 5678 90");
+    navigator.clipboard.writeText("DE________________________________");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -517,15 +517,24 @@ function HomePage() {
         </div>
 
         {/* Hero Section */}
-        <main className="relative z-10 flex flex-col items-center justify-center text-center px-6 mt-16">
-          <h1 
+        <main className="relative z-10 flex flex-col items-center justify-center text-center px-6 pt-16 md:pt-24">
+          <img 
+            src="https://s1.directupload.eu/images/260517/68grmn65.png" 
+            alt="Logo Wildtierhilfe Nord-Bayern mit Herz & Verstand" 
+            className="w-full max-w-[501px] mb-12 object-contain animate-fade-rise drop-shadow-md"
+          />
+          
+          <h1 className="sr-only">Wildtierhilfe Nord-Bayern mit Herz & Verstand - Tierrettung und Pflege in Franken</h1>
+          
+
+          <div 
             className="text-5xl sm:text-7xl md:text-8xl max-w-7xl font-normal font-display text-brand-black animate-fade-rise opacity-0" 
-            style={{ lineHeight: 0.95, letterSpacing: '-2.46px' }}
+            style={{ lineHeight: 0.95, letterSpacing: '-2.46px', animationDelay: '250ms' }}
           >
             <em className="text-brand-primary italic">Gemeinsam</em> schenken wir <em className="text-brand-primary italic">Hoffnung.</em>
-          </h1>
+          </div>
           
-          <p className="text-base sm:text-lg max-w-2xl mt-8 mb-4 leading-relaxed text-brand-gray animate-fade-rise-delay opacity-0">
+          <p className="text-base sm:text-lg max-w-2xl mt-8 mb-4 leading-relaxed text-brand-gray animate-fade-rise-delay opacity-0" style={{ animationDelay: '400ms' }}>
             Wir unterstützen Wildtier-Pflegestellen, Gnadenhöfe, Tierherbergen und Streuner-Stellen mit Sachspenden, Futter und mehr.
           </p>
           <div className="text-lg sm:text-xl font-medium text-brand-black animate-fade-rise-delay opacity-0">
@@ -726,8 +735,10 @@ function HomePage() {
               <h3 className="text-3xl font-display text-white mb-6">Finanzielle Unterstützung</h3>
               
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-6">
-                <div className="text-white/70 text-xs uppercase tracking-wider mb-2">Bankverbindung</div>
-                <div className="font-mono text-lg mb-4 break-all">DE12 3456 7890 1234 5678 90</div>
+                <div className="text-white/70 text-xs uppercase tracking-wider mb-2">Bank</div>
+                <div className="text-sm mb-4">C 24 Bank GmbH</div>
+                <div className="text-white/70 text-xs uppercase tracking-wider mb-2">IBAN</div>
+                <div className="font-mono text-lg mb-4 break-all">DE________________________________</div>
                 <button 
                   onClick={handleCopy}
                   className="flex items-center space-x-2 text-sm bg-white/20 hover:bg-white/30 transition-colors rounded-full px-4 py-2 relative group cursor-pointer"
@@ -738,9 +749,9 @@ function HomePage() {
               </div>
 
               <div className="mb-8">
-                <button className="w-full active:scale-95 bg-white text-black font-medium rounded-full py-3.5 px-6 hover:bg-gray-100 transition-all duration-300 cursor-pointer">
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Wildtierhilfe-NordBayern-mit-Herz@Web.de&item_name=Spende" target="_blank" rel="noopener noreferrer" className="w-full active:scale-95 bg-white text-black font-medium rounded-full py-3.5 px-6 hover:bg-gray-100 transition-all duration-300 cursor-pointer flex items-center justify-center">
                   Spenden via PayPal
-                </button>
+                </a>
               </div>
 
               <div className="mt-auto">
