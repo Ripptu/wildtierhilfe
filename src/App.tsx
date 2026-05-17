@@ -35,10 +35,23 @@ function SubPage({ title, children }: { title: string, children: React.ReactNode
 function WasWirTunPage() {
   return (
     <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
-      <div className="text-center mb-24">
-        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">Was wir tun.</h1>
-        <p className="text-xl text-brand-gray max-w-2xl mx-auto leading-relaxed">
-          Täglicher Einsatz für Wildtiere und Streunerkatzen. Unbürokratisch, pragmatisch und immer mit ganzem Herzen.
+      <div className="text-center mb-24 max-w-3xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">Was wir tun & Wem wir helfen.</h1>
+        <p className="text-xl text-brand-gray leading-relaxed mb-6">
+          Täglicher Einsatz für Wildtiere und Streunerkatzen. Unbürokratisch, pragmatisch und immer mit ganzem Herzen. Wir haben uns darauf eingerichtet, folgende Stellen mit unserer Hilfe (Sachspenden, Futter, Zubehör, Spielzeug, selbst gemachten Sachen usw.) zu unterstützen:
+        </p>
+        <ul className="text-lg text-brand-black font-medium text-left inline-block space-y-2 mb-8 bg-brand-white p-8 rounded-3xl shadow-sm border border-gray-100">
+          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Wildtier-Pflege-Stellen</li>
+          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Wildtier-Hilfe-Stellen</li>
+          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Streuner-Stellen (z. B. Katzen)</li>
+          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Tier-Herbergen</li>
+          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Gnadenhöfe</li>
+        </ul>
+        <p className="text-xl text-brand-gray leading-relaxed">
+          Was jetzt dann vielleicht noch an Hilfe-Gesuchen an uns herangetragen wird, muss man abwarten. Die Realität wird es zeigen, wer um Hilfe anfragt. Wir sind da offen und wollen niemanden ausschließen. Jeder der Hilfe braucht von den genannten Stellen, kann gerne jederzeit anfragen.
+        </p>
+        <p className="text-xl font-medium text-brand-primary mt-6">
+          Natürlich können wir nur helfen und unterstützen, wenn wir auch Sachen gespendet bekommen!
         </p>
       </div>
 
@@ -261,14 +274,36 @@ function KontaktPage() {
 function MissionPage() {
   return (
     <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
-      <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-12 text-center">Unsere Mission.</h1>
+      <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-12 text-center text-balance">Warum das Projekt ins Leben gerufen wurde.</h1>
       
+      <div className="max-w-4xl mx-auto mb-20 text-brand-gray text-lg leading-relaxed space-y-6">
+        <p>
+          <strong>Sehr geehrte Damen und Herren, liebe Tierfreunde in Nord-Bayern und darüber hinaus,</strong>
+        </p>
+        <p>
+          für den Neu-Aufbau und Neu-Gründung unseres neuen PRIVAT PROJEKTS / PRIVAT INITIATIVE mit dem Namen: <br/>
+          <strong>WILDTIERHILFE NORD-BAYERN mit Herz & Verstand</strong><br/>
+          (Hilfe – schnell – unkompliziert – unbürokratisch – direkt)
+        </p>
+        <p>
+          Wir haben zuvor bereits zweimal erfolgreich Tiertafeln aufgebaut. Ab Mai 2024 zunächst die Tiertafel Bamberg Stadt und Land(kreis) und ab Oktober 2024 die Futter-Arche Bamberg & Umgebung – federführend und anfangs praktisch alleine. Später kamen Helfer dazu, die uns unterstützten.
+        </p>
+        <p>
+          Leider haben sich unsere Wege dann wegen unüberbrückbarer Differenzen und Vorstellungen darüber, wie es in Zukunft weiterlaufen soll, getrennt. Wir (Mirco und Carmen) haben das vorherige Projekt im April 2026 freiwillig verlassen. Wir möchten unsere Lebenszeit, die wir investieren, sinnvoll verwenden und wirklich helfen und unterstützen. Deshalb auch unser neuer Slogan: <br/>
+          <em className="text-brand-primary">(HILFE - schnell – unkompliziert – unbürokratisch – direkt)</em>
+        </p>
+        <p>
+          Wir werden jetzt also ein <strong className="text-brand-black">DRITTES MAL</strong> beginnen, ein Projekt aufzubauen. Alle guten Dinge sind drei! Diesmal ist es unser EIGENES PRIVAT-PROJEKT! Kein Verein! Voll und ausschließlich unter unserer eigenen Kontrolle. Deshalb wird es keine Probleme mehr geben. Es wird alles schnell und effektiv gemacht, so wie es sein soll und auch sein muss. Kein bürokratischer Unsinn und irgendwelche Vorschriften und Vorgaben, die das Helfen verhindern!
+        </p>
+      </div>
+
       <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mb-20">
          <div>
             <Leaf className="w-12 h-12 text-brand-primary mb-6" strokeWidth={1.5} />
-            <h2 className="text-3xl font-display text-brand-black mb-6">Wir schließen die Lücke.</h2>
-            <p className="text-xl text-brand-gray leading-relaxed mb-6">Wir unterstützen Wildtier-Pflegestellen, Wildtier-Hilfestationen und Streuner-Stellen (insbesondere Katzen). Als reine Privat-Initiative – ohne bürokratische Hürden eines Vereins oder einer Firma – versorgen wir diese wichtigen Stellen direkt mit gespendeten Sachen, Futter, Spielzeug und Zubehör.</p>
-            <p className="text-lg text-brand-gray leading-relaxed">Oft stehen ambitionierte Tierretter alleine da. Die Kosten für Aufzuchtmilch, Spezialfutter oder Tierarztrechnungen sprengen schnell private Budgets. Hier setzen wir an: unbürokratisch, pragmatisch und schnell.</p>
+            <h2 className="text-3xl font-display text-brand-black mb-6">Zukunfts-Ziele & Pläne</h2>
+            <p className="text-lg text-brand-gray leading-relaxed mb-6">In Zukunft, so ist es angedacht, werden wir das ganze Privat-Projekt evtl. in eine gemeinnützige Organisation überführen. Dann wird es auch möglich sein, Spenden-Bescheinigungen/-Quittungen auszustellen, aber vorerst bleibt das Projekt ein PRIVAT-PROJEKT bis auf Weiteres! Sollte sich daran etwas ändern, werden wir es auf der Homepage bekannt geben.</p>
+            <p className="text-lg text-brand-gray leading-relaxed mb-6">Da wir wieder bei Null anfangen, ist es natürlich schwer, aber wir sind bemüht, es mit viel Elan und Einsatz aufzuziehen und sind engagiert wie immer!</p>
+            <p className="text-lg text-brand-gray leading-relaxed mb-4">Da dies eine Privat-Initiative ist, sind wir auf Spenden (Sach- und Geld-Spenden) angewiesen. Wir können <strong className="text-brand-black">KEINE SPENDEN-BESCHEINIGUNGEN/-QUITTUNGEN</strong> ausstellen. Wir werden versuchen, durch Aufrufe und evtl. Crowdfunding-Kampagnen Geld reinzubekommen, um den Wildtier-Pflegestellen, Tierherbergen, Gnadenhöfen und Streuner-Stellen dann Sachen, die benötigt werden, zu kaufen.</p>
          </div>
          <div className="grid grid-cols-2 gap-4">
             <div className="rounded-2xl overflow-hidden aspect-square">
@@ -282,8 +317,9 @@ function MissionPage() {
 
       <div className="bg-brand-primary rounded-3xl p-12 md:p-20 text-white shadow-xl max-w-6xl mx-auto relative overflow-hidden">
          <div className="relative z-10 max-w-2xl">
-            <h2 className="text-4xl font-display mb-6">Kein Verein, keine Verwaltungskosten.</h2>
-            <p className="text-xl text-white/90 leading-relaxed mb-8">Wir haben uns bewusst gegen die Rechtsform eines Vereins entschieden. Warum? Weil wir möchten, dass 100% der Mittel direkt bei den Tieren ankommen – ohne Umwege über Mitgliedsbeiträge, Notarkosten oder Vorstandssitzungen.</p>
+            <h2 className="text-4xl font-display mb-6">Selbstgemacht & Mit Herzblut</h2>
+            <p className="text-xl text-white/90 leading-relaxed mb-8">Neben finanzieller Unterstützung und gekauften Sachspenden haben wir auch wunderbare Helfer, die Dinge selbst herstellen. Dazu gehören Igel-Höhlen, Eichhörnchen-Kobel, gehäkelte Nester für Vögel oder auch spezielle Trauma-Rollen für verletzte Tiere.</p>
+            <p className="text-xl text-white/90 leading-relaxed mb-8">Wir würden uns sehr freuen, wenn Sie unser neues Privat-Projekt unterstützen würden. Sprechen Sie uns dazu gerne per Email an!</p>
             <div className="flex space-x-4">
                <Users className="w-8 h-8 text-brand-secondary" />
                <HeartHandshake className="w-8 h-8 text-brand-secondary" />
@@ -298,12 +334,19 @@ function MissionPage() {
 }
 
 function UnterstuetzenPage() {
-  const [copied, setCopied] = useState(false);
+  const [ibanCopied, setIbanCopied] = useState(false);
+  const [paypalCopied, setPaypalCopied] = useState(false);
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText("DE12 3456 7890 1234 5678 90");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopyIban = () => {
+    navigator.clipboard.writeText("DE________________________________");
+    setIbanCopied(true);
+    setTimeout(() => setIbanCopied(false), 2000);
+  };
+
+  const handleCopyPaypal = () => {
+    navigator.clipboard.writeText("Wildtierhilfe-NordBayern-mit-Herz@Web.de");
+    setPaypalCopied(true);
+    setTimeout(() => setPaypalCopied(false), 2000);
   };
 
   return (
@@ -318,35 +361,51 @@ function UnterstuetzenPage() {
          <div className="bg-brand-primary rounded-3xl p-10 text-white shadow-md flex flex-col justify-center relative overflow-hidden">
             <h3 className="text-3xl font-display text-white mb-8 relative z-10">Banküberweisung</h3>
             <div className="bg-brand-secondary/30 backdrop-blur-md rounded-2xl p-8 mb-6 relative z-10">
-              <div className="text-white/70 text-sm uppercase tracking-wider mb-3">IBAN</div>
-              <div className="font-mono text-xl sm:text-2xl mb-6 break-all tracking-widest">DE12 3456 7890 1234 5678 90</div>
+              <div className="text-white/70 text-sm uppercase tracking-wider mb-3">Bank</div>
+              <div className="text-lg mb-6">C 24 Bank GmbH – Direkt-Bank – Frankfurt / Main</div>
               <div className="text-white/70 text-sm uppercase tracking-wider mb-2">Empfänger</div>
-              <div className="text-lg mb-6">Wildtier-Hilfe Initiative</div>
+              <div className="text-lg mb-6">
+                Mirco Peltzer<br/>
+                <span className="text-base text-white/80">(Privat Projekt - Wildtierhilfe Nord-Bayern mit Herz & Verstand)</span>
+              </div>
+              <div className="text-white/70 text-sm uppercase tracking-wider mb-2">IBAN</div>
+              <div className="font-mono text-xl sm:text-2xl mb-4 break-all tracking-widest">DE________________________________</div>
+              <div className="text-white/70 text-sm uppercase tracking-wider mb-2">BIC</div>
+              <div className="font-mono text-xl sm:text-2xl mb-6 break-all tracking-widest">DEFFDEFF</div>
               <div className="text-white/70 text-sm uppercase tracking-wider mb-2">Verwendungszweck</div>
-              <div className="text-lg mb-8">Spende (optional: Ihr Name)</div>
+              <div className="text-lg mb-8">Spende</div>
               
               <button 
-                onClick={handleCopy}
+                onClick={handleCopyIban}
                 className="flex items-center justify-center w-full space-x-2 text-base font-medium bg-white text-brand-primary hover:bg-gray-100 transition-colors rounded-full px-6 py-4 cursor-pointer shadow-sm"
               >
-                {copied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                <span>{copied ? 'IBAN kopiert!' : 'IBAN kopieren'}</span>
+                {ibanCopied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                <span>{ibanCopied ? 'IBAN kopiert!' : 'IBAN kopieren'}</span>
               </button>
             </div>
          </div>
 
-         {/* PayPal Details */}
+          {/* PayPal Details */}
          <div className="bg-brand-white border border-gray-100 rounded-3xl p-10 text-brand-black shadow-md flex flex-col justify-center group relative overflow-hidden">
             <h3 className="text-3xl font-display text-brand-black mb-8 relative z-10">PayPal</h3>
             <div className="bg-gray-50 rounded-2xl p-8 mb-6 flex-1 flex flex-col items-center justify-center text-center relative z-10 border border-transparent group-hover:border-blue-100 transition-colors">
-              <div className="w-24 h-24 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 relative overflow-hidden group-hover:shadow-md transition-shadow">
-                <div className="absolute inset-0 opacity-20 bg-cover bg-center" style={{ backgroundImage: "url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_2zg6kRsQgLvpBAc5mmGVtMaqZi0%2Fhf_20260515_071642_62667796-0bc7-4ed0-8ae5-fbd0a07414f3.png&w=1280&q=85')" }} />
-                <QrCode className="w-12 h-12 text-[#0070BA] relative z-10" />
+              <div className="text-brand-gray text-sm uppercase tracking-wider mb-2 text-left w-full">Empfänger E-Mail</div>
+              <div className="text-lg mb-6 text-brand-black break-all font-medium">Wildtierhilfe-NordBayern-mit-Herz@Web.de</div>
+              <div className="text-brand-gray text-sm uppercase tracking-wider mb-2 text-left w-full">Verwendungszweck</div>
+              <div className="text-lg mb-8 text-left w-full">Spende</div>
+
+              <div className="w-full flex flex-col gap-4">
+                <button 
+                  onClick={handleCopyPaypal}
+                  className="w-full active:scale-95 bg-white border border-[#0070BA] text-[#0070BA] font-medium rounded-full py-4 px-6 hover:bg-blue-50 transition-all duration-300 shadow-sm cursor-pointer text-lg flex items-center justify-center gap-2"
+                >
+                  {paypalCopied ? <Check className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                  <span>{paypalCopied ? 'E-Mail kopiert!' : 'E-Mail kopieren'}</span>
+                </button>
+                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=Wildtierhilfe-NordBayern-mit-Herz@Web.de&item_name=Spende" target="_blank" rel="noopener noreferrer" className="w-full active:scale-95 bg-[#0070BA] text-white font-medium rounded-full py-4 px-6 hover:bg-[#003087] transition-all duration-300 shadow-sm cursor-pointer text-lg flex items-center justify-center gap-2">
+                  <span>Spenden via PayPal</span>
+                </a>
               </div>
-              <p className="text-brand-gray mb-8">Scannen Sie den QR-Code oder nutzen Sie den Button für eine schnelle und sichere Spende über PayPal.</p>
-              <a href="https://paypal.com/donate" target="_blank" rel="noopener noreferrer" className="w-full active:scale-95 bg-[#0070BA] text-white font-medium rounded-full py-4 px-6 hover:bg-[#003087] transition-all duration-300 shadow-sm cursor-pointer text-lg flex items-center justify-center gap-2">
-                <span>Spenden via PayPal</span>
-              </a>
             </div>
          </div>
       </div>
@@ -466,9 +525,12 @@ function HomePage() {
             <em className="text-brand-primary italic">Gemeinsam</em> schenken wir <em className="text-brand-primary italic">Hoffnung.</em>
           </h1>
           
-          <p className="text-base sm:text-lg max-w-2xl mt-8 leading-relaxed text-brand-gray animate-fade-rise-delay opacity-0">
-            Eine private Initiative für Tiere in Not. Wir unterstützen Wildtier-Pflegestellen und Streuner mit Sachspenden, Futter und finanziellen Mitteln. Keine Firma, kein Verein – nur pure Hilfsbereitschaft.
+          <p className="text-base sm:text-lg max-w-2xl mt-8 mb-4 leading-relaxed text-brand-gray animate-fade-rise-delay opacity-0">
+            Wir unterstützen Wildtier-Pflegestellen, Gnadenhöfe, Tierherbergen und Streuner-Stellen mit Sachspenden, Futter und mehr.
           </p>
+          <div className="text-lg sm:text-xl font-medium text-brand-black animate-fade-rise-delay opacity-0">
+            HILFE - schnell – unkompliziert – unbürokratisch – direkt
+          </div>
 
           <Link to="/unterstuetzen">
             <button className="rounded-full px-14 py-5 text-base mt-12 bg-brand-primary text-brand-white hover:scale-103 hover:shadow-[0_4px_20px_rgba(42,77,62,0.3)] transition-all duration-300 animate-fade-rise-delay-2 opacity-0 cursor-pointer">
@@ -505,8 +567,13 @@ function HomePage() {
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal font-display text-brand-black leading-tight mb-8">
                 Direkte Hilfe, wo sie gebraucht wird.
               </h2>
+              <p className="text-lg sm:text-xl leading-relaxed text-brand-gray font-body max-w-xl mb-4">
+                Sehr geehrte Wildtier-Freunde, liebe Mitbürger,<br /><br />
+                ein ganz <span className="font-medium text-brand-black">HERZLICHES WILLKOMMEN</span> auf unserer ersten Homepage der PRIVAT-INITIATIVE: <br />
+                <span className="text-brand-primary font-medium">WILDTIER HILFE – NORD-BAYERN mit HERZ und VERSTAND</span>
+              </p>
               <p className="text-lg sm:text-xl leading-relaxed text-brand-gray font-body max-w-xl">
-                Wir unterstützen <span className="text-brand-primary font-medium">Wildtier-Pflegestellen, Wildtier-Hilfestationen und Streuner-Stellen</span> (insbesondere Katzen). Als reine Privat-Initiative – ohne bürokratische Hürden eines Vereins oder einer Firma – versorgen wir diese wichtigen Stellen direkt mit gespendeten Sachen, Futter, Spielzeug und Zubehör. Wenn finanzielle Mittel vorhanden sind, kaufen wir exakt das, was am dringendsten benötigt wird.
+                Schön, dass Du zu uns gefunden hast! Unser Projekt ist aus dem Wunsch heraus entstanden, dort zu helfen und hinzusehen, wo Hilfe gebraucht wird. Wir helfen mit Engagement, Herzblut und Liebe zu den Tieren.
               </p>
             </motion.div>
             <motion.div 
@@ -540,8 +607,11 @@ function HomePage() {
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal font-display text-brand-black leading-tight mb-8">
                 Warum wir gestartet sind.
               </h2>
+              <p className="text-lg sm:text-xl leading-relaxed text-brand-gray font-body max-w-xl mb-4">
+                Wir haben uns zum Ziel gesetzt, Wildtier-Pflegestellen, Wildtier-Hilfe-Stellen, Gnadenhöfe, Tierherbergen und Streuner Stellen (z. B. Katzen) zu unterstützen.
+              </p>
               <p className="text-lg sm:text-xl leading-relaxed text-brand-gray font-body max-w-xl">
-                Oft scheitert Tierschutz an fehlenden Ressourcen an der Basis. Wir wollen genau an dieser Stelle ansetzen und sicherstellen, dass fehlende Mittel nicht über Leben oder Tod entscheiden. Wir haben gesehen, wie private Pflegestellen an ihre Grenzen stoßen, und uns entschieden, eine <span className="text-brand-primary font-medium">direkte Brücke zwischen Spendern und Helfern</span> zu bauen. Jeder Cent und jede Dose Futter kommt genau dort an, wo Leben gerettet werden.
+                Da diese Stellen die Arbeit für verletzte Tiere und Wildtiere oft aus privater Tasche bezahlen und kaum Unterstützung bekommen, ist dies eine absolute Lücke, wo dringend gehandelt werden muss. Das wollen wir mit unserer Privat-Initiative nun tun! Die Devise heißt: <span className="text-brand-primary font-medium">HANDELN - nicht nur reden!</span>
               </p>
             </motion.div>
             <motion.div 
@@ -570,13 +640,16 @@ function HomePage() {
               transition={{ duration: 0.8, ease: 'easeOut' }}
             >
               <div className="text-sm uppercase tracking-widest text-brand-secondary font-body mb-4">
-                Blick nach vorn
+                In unseren Worten
               </div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-normal font-display text-brand-black leading-tight mb-8">
-                Was wir noch erreichen wollen.
+                Jedes Leben zählt!
               </h2>
+              <p className="text-lg sm:text-xl leading-relaxed text-brand-gray font-body max-w-xl mb-4">
+                "Man erkennt den Wert einer Gesellschaft daran, wie sie mit den Schwächsten ihrer Glieder verfährt." <em className="text-sm">(Gustav Heinemann)</em>
+              </p>
               <p className="text-lg sm:text-xl leading-relaxed text-brand-gray font-body max-w-xl">
-                Unsere Vision ist ein <span className="text-brand-primary font-medium">stabiles Netzwerk aus Unterstützern</span>. Wir planen den Aufbau eines zentralen Lagers für Sachspenden und die Schaffung eines Notfall-Fonds für schnelle tiermedizinische Hilfe. Wir möchten noch mehr Pflegestellen entlasten und die Grundversorgung für heimatlose Tiere und Wildtiere langfristig sichern.
+                Egal ob groß oder klein, für jedes Tier macht es einen Unterschied! Auch Tiere haben Gefühle – Schmerz, Angst, Trauer. Wir wollen diese großartige Arbeit der Pflegestellen mit Futter, Spielzeug, Zubehör und selbst gemachten Sachen aktiv unterstützen. <span className="text-brand-primary font-medium">100 Prozent privat.</span>
               </p>
             </motion.div>
             <motion.div 
@@ -730,10 +803,22 @@ export default function App() {
           <Route path="/kontakt" element={<KontaktPage />} />
           <Route path="/impressum" element={
             <SubPage title="Impressum">
-              <h2 className="text-2xl font-display text-brand-black mb-4 mt-8">Angaben gemäß § 5 TMG</h2>
-              <p className="mb-6">Wildtier-Hilfe<br/>Musterweg 12<br/>12345 Musterstadt</p>
+              <h2 className="text-2xl font-display text-brand-black mb-4 mt-8">Privat-Initiative / Privat Projekt</h2>
+              <p className="mb-6 font-bold text-lg">Wildtier-Hilfe Nord-Bayern mit Herz & Verstand</p>
+              
+              <p className="mb-6 leading-relaxed">
+                Carmen Körner<br/>
+                Schlesienstrasse 125<br/>
+                OT; Lichteneiche<br/>
+                96117 Memmelsdorf
+              </p>
+              
               <h2 className="text-2xl font-display text-brand-black mb-4 mt-8">Kontakt</h2>
-              <p className="mb-6">Telefon: +49 (0) 123 44 55 66<br/>E-Mail: info@wildtier-hilfe.example.com</p>
+              <p className="mb-6 leading-relaxed">
+                Handy: (0162) 408 27 03 (Vodafone / Carmen Körner)<br/>
+                E-Mail: <a href="mailto:Wildtierhilfe-NordBayern-mit-Herz@Web.de" className="text-brand-primary hover:underline">Wildtierhilfe-NordBayern-mit-Herz@Web.de</a><br/>
+                Homepage: <a href="https://www.wildtierhilfe-NordBayern-mit-Herz.de" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">www.wildtierhilfe-NordBayern-mit-Herz.de</a>
+              </p>
             </SubPage>
           } />
           <Route path="/datenschutz" element={
