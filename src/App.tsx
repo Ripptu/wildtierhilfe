@@ -142,6 +142,47 @@ function WasWirTunPage() {
   );
 }
 
+function HappyEndsPage() {
+  const images = [
+    "https://s1.directupload.eu/images/260521/utk4o5zz.jpg",
+    "https://s1.directupload.eu/images/260521/j5vzgisv.jpg",
+    "https://s1.directupload.eu/images/260521/halumlt5.jpg",
+    "https://s1.directupload.eu/images/260521/sxa2d5fs.jpg",
+    "https://s1.directupload.eu/images/260521/xbksxnn9.jpg",
+    "https://s1.directupload.eu/images/260521/6962f9fz.jpg",
+    "https://s1.directupload.eu/images/260521/t93zqtkc.jpg",
+    "https://s1.directupload.eu/images/260521/hy2jqmqy.jpg",
+    "https://s1.directupload.eu/images/260521/9f5eburg.jpg",
+    "https://s1.directupload.eu/images/260521/dyj2ozwc.jpg"
+  ];
+
+  return (
+    <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
+      <div className="text-center mb-16 max-w-3xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">Happy Ends</h1>
+        <p className="text-xl text-brand-gray leading-relaxed mb-6">
+          Das ist der Grund, warum wir jeden Tag weitermachen. Die kleinen und großen Erfolge, wenn Tierleid beendet werden kann und unsere Pfleglinge bereit für ein neues Leben sind.
+        </p>
+      </div>
+
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+        {images.map((imgUrl, index) => (
+          <motion.div 
+            key={index}
+            className="break-inside-avoid overflow-hidden rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+          >
+            <img src={imgUrl} className="w-full object-cover group-hover:scale-105 transition-transform duration-700" alt={`Happy End Tier ${index + 1}`} />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function PartnerPage() {
   return (
     <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
@@ -424,6 +465,7 @@ function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/selbstgemachtes" className="hover:text-brand-secondary transition-colors duration-300">Handgemachtes</Link>
           <Link to="/unterstuetzen" className="hover:text-brand-secondary transition-colors duration-300">Unterstützen</Link>
           <Link to="/mission" className="hover:text-brand-secondary transition-colors duration-300">Mission</Link>
+          <Link to="/happy-ends" className="hover:text-brand-secondary transition-colors duration-300">Happy Ends</Link>
           <Link to="/partner" className="hover:text-brand-secondary transition-colors duration-300">Partner</Link>
           <Link to="/kontakt" className="hover:text-brand-secondary transition-colors duration-300">Kontakt</Link>
         </div>
@@ -787,6 +829,7 @@ export default function App() {
           <Route path="/selbstgemachtes" element={<SelbstgemachtesPage />} />
           <Route path="/unterstuetzen" element={<UnterstuetzenPage />} />
           <Route path="/mission" element={<MissionPage />} />
+          <Route path="/happy-ends" element={<HappyEndsPage />} />
           <Route path="/partner" element={<PartnerPage />} />
           <Route path="/kontakt" element={<KontaktPage />} />
           <Route path="/impressum" element={
