@@ -58,7 +58,7 @@ function WasWirTunPage() {
       <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
          <div className="order-2 md:order-1">
             <h2 className="text-3xl font-display text-brand-black mb-6">Erstversorgung & Sicherung</h2>
-            <p className="text-lg text-brand-gray leading-relaxed mb-6">Jeder Tag bringt neue Herausforderungen. Wenn das Telefon klingelt, zählt oft jede Minute. Wir rücken aus, um verletzte Wildtiere – vom Rehkitz bis zum Igel – zu sichern und sie zur ärztlichen Erstversorgung zu bringen.</p>
+            <p className="text-lg text-brand-gray leading-relaxed mb-6">Jeder Tag bringt neue Herausforderungen. Wenn das Telefon klingelt, zählt oft jede Minute. Wenn Stellen für verletzte Wildtiere gesucht werden, können wir entsprechende Kontakte vermitteln und so helfen die Versorgung und Betreuung zu organisieren.</p>
             <p className="text-lg text-brand-gray leading-relaxed mb-8">Da Wildtiere in der Regel schnell in starken Stress geraten, gehen wir besonders behutsam vor und arbeiten eng mit erfahrenen und spezialisierten Tierärzten zusammen.</p>
             <Link to="/kontakt">
               <button className="flex items-center text-brand-primary font-medium group text-sm hover:text-brand-black transition-colors cursor-pointer">
@@ -78,85 +78,22 @@ function WasWirTunPage() {
          </div>
          <div>
             <h2 className="text-3xl font-display text-brand-black mb-6">Streunerhilfe & Kastration</h2>
-            <p className="text-lg text-brand-gray leading-relaxed mb-6">Ein großes Problem, das leider noch immer oft übersehen wird: die unkontrollierte Vermehrung wildlebender Katzen. In teils aufwändigen Fangaktionen sichern wir verwilderte Tiere.</p>
+            <p className="text-lg text-brand-gray leading-relaxed mb-6">Ein großes Problem, das leider noch immer oft übersehen wird: die unkontrollierte Vermehrung wildlebender Katzen.</p>
             <p className="text-lg text-brand-gray leading-relaxed mb-6">Eine Kastration, medizinische Versorgung und anschließende Betreuung durch Pflegestellen ist unser absoluter Fokusbereich in der Katzenhilfe, um langfristiges Leid zu verhindern.</p>
          </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mt-12 border-t border-gray-100 pt-16">
+      <div className="grid md:grid-cols-2 gap-8 mt-12 border-t border-gray-100 pt-16">
          <div className="p-8">
             <PackageOpen className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
             <h4 className="font-display text-2xl text-brand-black mb-4">Sach- & Materialausgabe</h4>
             <p className="text-brand-gray text-sm leading-relaxed">Wir sammeln Futter und Zubehör von Spendern und verteilen es bedarfsgerecht und kostenlos an Pflegestellen, die die Last nicht alleine tragen können.</p>
          </div>
          <div className="p-8">
-            <HeartHandshake className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
-            <h4 className="font-display text-2xl text-brand-black mb-4">Medizinische Kosten</h4>
-            <p className="text-brand-gray text-sm leading-relaxed">Wo finanzielle Spenden eingehen, nutzen wir jeden Euro zielgerichtet, um Tierarztrechnungen für Notfälle zu bezahlen.</p>
-         </div>
-         <div className="p-8">
             <Leaf className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
             <h4 className="font-display text-2xl text-brand-black mb-4">Auswilderung</h4>
-            <p className="text-brand-gray text-sm leading-relaxed">Sobald Tiere wieder fit sind, suchen wir nach geeigneten Gebieten und betreuen eine schonende Auswilderung zurück in die Natur.</p>
+            <p className="text-brand-gray text-sm leading-relaxed">Nachdem die Fundtiere/Wildtiere und Pfleglinge aufgepäppelt wurden, werden Sie von den Pflegestellen wieder in die Freiheit entlassen.</p>
          </div>
-      </div>
-    </div>
-  );
-}
-
-function HappyEndsPage() {
-  return (
-    <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
-      <div className="text-center mb-24 max-w-2xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">Happy Ends.</h1>
-        <p className="text-xl text-brand-gray leading-relaxed">
-          Das ist der Grund, warum wir jeden Tag weitermachen. Die kleinen und großen Erfolge, wenn ein Tierleid beendet werden kann.
-        </p>
-      </div>
-      
-      {/* Featured Story */}
-      <div className="bg-brand-primary rounded-3xl overflow-hidden shadow-xl mb-24 flex flex-col md:flex-row text-white w-full">
-         <div className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center">
-            <div className="text-sm uppercase tracking-widest text-brand-secondary font-body mb-4">
-              Besondere Geschichte
-            </div>
-            <h2 className="text-4xl font-display mb-6">Wunder geschehen.</h2>
-            <p className="text-lg text-white/90 leading-relaxed mb-8">Als dieser kleine Schützling völlig entkräftet und verletzt gefunden wurde, stand es schlecht um ihn. Durch unsere direkte Kooperation mit der Wildtier-Pflegestelle vor Ort konnten wir eine Intensivbetreuung sichern. Tag und Nacht wurde gepäppelt, spezielles Futter organisiert und tierärztliche Betreuung finanziert.</p>
-            <p className="text-lg text-white/90 leading-relaxed">Heute ist er vollständig genesen und bereits in den Auswilderungsprozess integriert. Ein Beweis dafür, dass sich jeder Einsatz lohnt.</p>
-         </div>
-         <div className="md:w-1/2 aspect-square md:aspect-auto h-full min-h-[400px] relative">
-            <img src={IMAGES.mission3} className="absolute inset-0 w-full h-full object-cover" alt="Featured Happy End" />
-         </div>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-8">
-        <div className="bg-gray-50 border border-gray-100 rounded-3xl overflow-hidden group hover:shadow-md transition-shadow">
-           <div className="h-64 overflow-hidden relative">
-             <img src={IMAGES.new1} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Happy End 1" />
-           </div>
-           <div className="p-8">
-              <h3 className="text-2xl font-display text-brand-black mb-3">Die scheue Fundkatze</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">Über Wochen wurde sie angefüttert, bis wir sie sichern konnten. Nach Quarantäne, Tierarztcheck und liebevoller Sozialisation schnurrt sie heute auf dem Sofa ihrer neuen Familie.</p>
-           </div>
-        </div>
-        <div className="bg-gray-50 border border-gray-100 rounded-3xl overflow-hidden group hover:shadow-md transition-shadow">
-           <div className="h-64 overflow-hidden relative">
-             <img src={IMAGES.qrBg} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Happy End 2" />
-           </div>
-           <div className="p-8">
-              <h3 className="text-2xl font-display text-brand-black mb-3">Aufpäppeln in Bestzeit</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">Dank sofortiger Bereitstellung von Spezialmilch konnte die ehrenamtliche Pflegestelle direkt mit der Handaufzucht beginnen. Ohne Verzögerung, ohne Bürokratie.</p>
-           </div>
-        </div>
-        <div className="bg-gray-50 border border-gray-100 rounded-3xl overflow-hidden group hover:shadow-md transition-shadow">
-           <div className="h-64 overflow-hidden relative">
-             <img src={IMAGES.happy5} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Happy End 3" />
-           </div>
-           <div className="p-8">
-              <h3 className="text-2xl font-display text-brand-black mb-3">Zweite Chance gesichert</h3>
-              <p className="text-gray-600 leading-relaxed text-sm">Bei Wildunfällen ist schnelles Handeln entscheidend. Durch unsere gesponsorten Transportboxen und den Notgroschen beim Tierarzt konnten wir auch in diesem Fall retten.</p>
-           </div>
-        </div>
       </div>
     </div>
   );
@@ -289,7 +226,7 @@ function MissionPage() {
           Wir haben zuvor bereits zweimal erfolgreich Tiertafeln aufgebaut. Ab Mai 2024 zunächst die Tiertafel Bamberg Stadt und Land(kreis) und ab Oktober 2024 die Futter-Arche Bamberg & Umgebung – federführend und anfangs praktisch alleine. Später kamen Helfer dazu, die uns unterstützten.
         </p>
         <p>
-          Leider haben sich unsere Wege dann wegen unüberbrückbarer Differenzen und Vorstellungen darüber, wie es in Zukunft weiterlaufen soll, getrennt. Wir (Mirco und Carmen) haben das vorherige Projekt im April 2026 freiwillig verlassen. Wir möchten unsere Lebenszeit, die wir investieren, sinnvoll verwenden und wirklich helfen und unterstützen. Deshalb auch unser neuer Slogan: <br/>
+          Leider haben sich unsere Wege dann wegen unüberbrückbarer Differenzen und Vorstellungen darüber, wie es in Zukunft weiterlaufen soll, getrennt. Wir (Mirco und Carmen) haben das vorherige Projekt im April 2025 freiwillig verlassen. Wir möchten unsere Lebenszeit, die wir investieren, sinnvoll verwenden und wirklich helfen und unterstützen. Deshalb auch unser neuer Slogan: <br/>
           <em className="text-brand-primary">(HILFE - schnell – unkompliziert – unbürokratisch – direkt)</em>
         </p>
         <p>
@@ -352,8 +289,8 @@ function UnterstuetzenPage() {
   return (
     <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
       <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-12 text-center">Ihre Unterstützung zählt.</h1>
-      <p className="text-xl text-brand-gray text-center max-w-2xl mx-auto mb-16 leading-relaxed">
-        Jeder Beitrag, ob finanziell oder als Sachspende, fließt zu 100% in die direkte Hilfe für Wildtiere und Streuner in Not.
+      <p className="text-xl text-brand-gray text-center max-w-4xl mx-auto mb-16 leading-relaxed">
+        100 Prozent der Sachspenden fließen direkt in die Wildtierhilfe. Hinter jeder erfolgreichen Hilfsaktion steht ein engagiertes Team und ein wenig Organisation und viel Arbeit und etwas Verwaltung. Ein kleiner Teil Ihrer Spende fließt daher in unsere Verwaltung. Das ist unser Motor, damit Ihre Hilfe dort ankommt, wo sie am dringendsten gebraucht wird. Wir setzen Ihre Spende effizient ein. Deshalb muss ein kleiner Anteil für den reibungslose Organisation des ganzen Projekts dafür verwendet werden. Wir hoffen Sie haben Verständnis dafür. Herzlichen Dank! Mirco, Carmen und Team.
       </p>
 
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -443,7 +380,6 @@ function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/was-wir-tun" className="text-brand-black hover:text-brand-secondary transition-colors duration-300">Was wir tun</Link>
           <Link to="/unterstuetzen" className="hover:text-brand-secondary transition-colors duration-300">Unterstützen</Link>
           <Link to="/mission" className="hover:text-brand-secondary transition-colors duration-300">Mission</Link>
-          <Link to="/happy-ends" className="hover:text-brand-secondary transition-colors duration-300">Happy Ends</Link>
           <Link to="/partner" className="hover:text-brand-secondary transition-colors duration-300">Partner</Link>
           <Link to="/kontakt" className="hover:text-brand-secondary transition-colors duration-300">Kontakt</Link>
         </div>
@@ -592,11 +528,10 @@ function HomePage() {
               viewport={{ once: true, margin: "-20%" }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             >
-              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative group">
-                <div 
-                  className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-in-out" 
-                  style={{ backgroundImage: "url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_2zg6kRsQgLvpBAc5mmGVtMaqZi0%2Fhf_20260514_062001_a9d99f46-e739-4321-97cb-e8ea4bea5010.png&w=1280&q=85')" }}
-                />
+              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative group border border-gray-200">
+                <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center text-gray-400 group-hover:bg-gray-200 transition-colors duration-700 ease-in-out">
+                    <span className="text-sm tracking-wider uppercase font-medium">BILD FOLGT</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -630,11 +565,10 @@ function HomePage() {
               viewport={{ once: true, margin: "-20%" }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             >
-              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative group">
-                <div 
-                  className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-in-out" 
-                  style={{ backgroundImage: "url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_2zg6kRsQgLvpBAc5mmGVtMaqZi0%2Fhf_20260514_061911_a7e0e6ed-d2ca-4656-811c-b91cbc1adf78.png&w=1280&q=85')" }}
-                />
+              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative group border border-gray-200">
+                <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center text-gray-400 group-hover:bg-gray-200 transition-colors duration-700 ease-in-out">
+                    <span className="text-sm tracking-wider uppercase font-medium">BILD FOLGT</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -668,11 +602,10 @@ function HomePage() {
               viewport={{ once: true, margin: "-20%" }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
             >
-              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative group">
-                <div 
-                  className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700 ease-in-out" 
-                  style={{ backgroundImage: "url('https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_2zg6kRsQgLvpBAc5mmGVtMaqZi0%2Fhf_20260515_071613_392a05be-c67f-467e-bee5-ee1c9b7b7e4f.png&w=1280&q=85')" }}
-                />
+              <div className="aspect-[4/5] bg-gray-100 rounded-2xl overflow-hidden relative group border border-gray-200">
+                <div className="w-full h-full bg-gray-100 flex flex-col items-center justify-center text-gray-400 group-hover:bg-gray-200 transition-colors duration-700 ease-in-out">
+                    <span className="text-sm tracking-wider uppercase font-medium">BILD FOLGT</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -809,7 +742,6 @@ export default function App() {
           <Route path="/was-wir-tun" element={<WasWirTunPage />} />
           <Route path="/unterstuetzen" element={<UnterstuetzenPage />} />
           <Route path="/mission" element={<MissionPage />} />
-          <Route path="/happy-ends" element={<HappyEndsPage />} />
           <Route path="/partner" element={<PartnerPage />} />
           <Route path="/kontakt" element={<KontaktPage />} />
           <Route path="/impressum" element={
