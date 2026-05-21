@@ -32,6 +32,49 @@ function SubPage({ title, children }: { title: string, children: React.ReactNode
   );
 }
 
+function SelbstgemachtesPage() {
+  const customItems = [
+    { src: "https://s1.directupload.eu/images/260521/6inimrk6.jpg", desc: "Warmes Netz/Schlafsack für Pfleglinge" },
+    { src: "https://s1.directupload.eu/images/260521/lycac3t6.jpg", desc: "Gemütlicher Kobel" },
+    { src: "https://s1.directupload.eu/images/260521/vz5w649s.jpg", desc: "Weitläufiges Hängenest" },
+    { src: "https://s1.directupload.eu/images/260521/xqxjwyky.jpg", desc: "Weicher Schlafsack (z.B. für Igel)" },
+    { src: "https://s1.directupload.eu/images/260521/24f5k4xa.jpg", desc: "Traumarolle für Eichhörnchen" },
+    { src: "https://s1.directupload.eu/images/260521/blbhs4i2.jpg", desc: "Kuschelnest" },
+    { src: "https://s1.directupload.eu/images/260521/pycpfcvr.jpg", desc: "Behagliche Traumarolle" },
+  ];
+
+  return (
+    <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
+      <div className="text-center mb-16 max-w-3xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">Unsere handgemachten Sachen</h1>
+        <p className="text-xl text-brand-gray leading-relaxed mb-6">
+          Wir stellen Nester, Kobel, Traumarollen, Schlafsäcke für Igel, Eichhörnchen und andere Pfleglinge selbst her. Mit ganz viel Liebe und Herzblut gefertigt, um den kleinen Patienten Geborgenheit und Wärme zu schenken.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {customItems.map((item, index) => (
+          <motion.div 
+            key={index} 
+            className="group grid grid-rows-[auto_1fr] bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-md transition-shadow"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <div className="aspect-square w-full overflow-hidden">
+               <img src={item.src} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.desc} />
+            </div>
+            <div className="p-6 bg-gray-50 flex items-center justify-center text-center">
+              <span className="text-brand-black font-medium">{item.desc}</span>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function WasWirTunPage() {
   return (
     <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
@@ -378,6 +421,7 @@ function Layout({ children }: { children: React.ReactNode }) {
         </Link>
         <div className="hidden md:flex space-x-8 text-sm font-medium text-brand-gray">
           <Link to="/was-wir-tun" className="text-brand-black hover:text-brand-secondary transition-colors duration-300">Was wir tun</Link>
+          <Link to="/selbstgemachtes" className="hover:text-brand-secondary transition-colors duration-300">Handgemachtes</Link>
           <Link to="/unterstuetzen" className="hover:text-brand-secondary transition-colors duration-300">Unterstützen</Link>
           <Link to="/mission" className="hover:text-brand-secondary transition-colors duration-300">Mission</Link>
           <Link to="/partner" className="hover:text-brand-secondary transition-colors duration-300">Partner</Link>
@@ -740,6 +784,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/was-wir-tun" element={<WasWirTunPage />} />
+          <Route path="/selbstgemachtes" element={<SelbstgemachtesPage />} />
           <Route path="/unterstuetzen" element={<UnterstuetzenPage />} />
           <Route path="/mission" element={<MissionPage />} />
           <Route path="/partner" element={<PartnerPage />} />
