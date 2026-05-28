@@ -78,65 +78,86 @@ function SelbstgemachtesPage() {
 function WasWirTunPage() {
   return (
     <div className="pt-40 pb-32 px-8 max-w-7xl mx-auto min-h-[70vh]">
-      <div className="text-center mb-24 max-w-3xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">Was wir tun & Wem wir helfen.</h1>
-        <p className="text-xl text-brand-gray leading-relaxed mb-6">
-          Täglicher Einsatz für Wildtiere und Streunerkatzen. Unbürokratisch, pragmatisch und immer mit ganzem Herzen. Wir haben uns darauf eingerichtet, folgende Stellen mit unserer Hilfe (Sachspenden, Futter, Zubehör, Spielzeug, selbst gemachten Sachen usw.) zu unterstützen:
-        </p>
-        <ul className="text-lg text-brand-black font-medium text-left inline-block space-y-2 mb-8 bg-brand-white p-8 rounded-3xl shadow-sm border border-gray-100">
-          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Wildtier-Pflege-Stellen</li>
-          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Wildtier-Hilfe-Stellen</li>
-          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Streuner-Stellen (z. B. Katzen)</li>
-          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Tier-Herbergen</li>
-          <li className="flex items-center"><Leaf className="w-5 h-5 text-brand-primary mr-3" /> Gnadenhöfe</li>
-        </ul>
-        <p className="text-xl text-brand-gray leading-relaxed">
-          Was jetzt dann vielleicht noch an Hilfe-Gesuchen an uns herangetragen wird, muss man abwarten. Die Realität wird es zeigen, wer um Hilfe anfragt. Wir sind da offen und wollen niemanden ausschließen. Jeder der Hilfe braucht von den genannten Stellen, kann gerne jederzeit anfragen.
-        </p>
-        <p className="text-xl font-medium text-brand-primary mt-6">
-          Natürlich können wir nur helfen und unterstützen, wenn wir auch Sachen gespendet bekommen!
+      {/* Header */}
+      <div className="text-center mb-16 max-w-3xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-display text-brand-black mb-6">
+          Was wir tun <span className="text-brand-primary">&amp;</span> wem wir helfen
+        </h1>
+        <p className="text-xl text-brand-gray leading-relaxed font-body">
+          Mit Herz, Engagement und dem Wunsch, unkompliziert zu helfen, unterstützen wir verschiedene Einrichtungen und Pflegestellen aus dem Bereich Tier- und Wildtierhilfe.
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-         <div className="order-2 md:order-1">
-            <h2 className="text-3xl font-display text-brand-black mb-6">Erstversorgung & Sicherung</h2>
-            <p className="text-lg text-brand-gray leading-relaxed mb-6">Jeder Tag bringt neue Herausforderungen. Wenn das Telefon klingelt, zählt oft jede Minute. Wenn Stellen für verletzte Wildtiere gesucht werden, können wir entsprechende Kontakte vermitteln und so helfen die Versorgung und Betreuung zu organisieren.</p>
-            <p className="text-lg text-brand-gray leading-relaxed mb-8">Da Wildtiere in der Regel schnell in starken Stress geraten, gehen wir besonders behutsam vor und arbeiten eng mit erfahrenen und spezialisierten Tierärzten zusammen.</p>
-            <Link to="/kontakt">
-              <button className="flex items-center text-brand-primary font-medium group text-sm hover:text-brand-black transition-colors cursor-pointer">
-                Einen Notfall melden
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </Link>
-         </div>
-         <div className="rounded-3xl overflow-hidden shadow-sm aspect-[4/3] order-1 md:order-2">
-            <img src={IMAGES.mission1} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Erstversorgung" />
-         </div>
-      </div>
+      <div className="grid md:grid-cols-12 gap-12 items-start">
+        {/* Left column: Main description and lists */}
+        <div className="md:col-span-12 lg:col-span-7 space-y-8">
+          <div className="bg-brand-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-sm leading-relaxed">
+            <p className="text-lg text-brand-gray mb-8 leading-relaxed">
+              Unsere Initiative hilft – soweit es uns zeitlich und organisatorisch möglich ist – mit Sachspenden, Futter, Hygieneartikeln, Zubehör sowie selbst angefertigten Hilfsmitteln und vielem mehr.
+            </p>
+            
+            <h3 className="text-xl font-display text-brand-black mb-6">Dazu gehören unter anderem:</h3>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                "Wildtierpflegestellen",
+                "Wildtierhilfen",
+                "Streunerstellen (z. B. Katzen)",
+                "Tierherbergen",
+                "Gnadenhöfe"
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3 bg-gray-50 border border-gray-100 rounded-2xl p-4 hover:border-brand-primary/20 transition-all">
+                  <span className="text-xl select-none">🐾</span>
+                  <p className="font-semibold text-brand-black text-sm sm:text-base leading-snug">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center mb-32">
-         <div className="rounded-3xl overflow-hidden shadow-sm aspect-[4/3]">
-            <img src={IMAGES.new1} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Streunerhilfe" />
-         </div>
-         <div>
-            <h2 className="text-3xl font-display text-brand-black mb-6">Streunerhilfe & Kastration</h2>
-            <p className="text-lg text-brand-gray leading-relaxed mb-6">Ein großes Problem, das leider noch immer oft übersehen wird: die unkontrollierte Vermehrung wildlebender Katzen.</p>
-            <p className="text-lg text-brand-gray leading-relaxed mb-6">Eine Kastration, medizinische Versorgung und anschließende Betreuung durch Pflegestellen ist unser absoluter Fokusbereich in der Katzenhilfe, um langfristiges Leid zu verhindern.</p>
-         </div>
-      </div>
+          <div className="bg-brand-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-sm leading-relaxed space-y-6">
+            <p className="text-lg text-brand-gray leading-relaxed">
+              Wir sind grundsätzlich offen für weitere Hilfeanfragen aus dem Bereich Tier- und Wildtierhilfe und möchten dort unterstützen, wo Hilfe benötigt wird und es uns möglich ist zu helfen.
+            </p>
+            <p className="text-lg text-brand-gray leading-relaxed">
+              Unser Ziel ist es, möglichst unkompliziert und direkt dort zu unterstützen, wo Hilfe dringend gebraucht wird.
+            </p>
+            <p className="text-lg text-brand-gray leading-relaxed font-body">
+              Natürlich können wir nur helfen, wenn wir selbst Unterstützung erhalten. Deshalb sind wir auf Sach- und Geldspenden angewiesen, um benötigte Dinge weitergeben und Hilfe möglich machen zu können.
+            </p>
+          </div>
+        </div>
 
-      <div className="grid md:grid-cols-2 gap-8 mt-12 border-t border-gray-100 pt-16">
-         <div className="p-8">
-            <PackageOpen className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
-            <h4 className="font-display text-2xl text-brand-black mb-4">Sach- & Materialausgabe</h4>
-            <p className="text-brand-gray text-sm leading-relaxed">Wir sammeln Futter und Zubehör von Spendern und verteilen es bedarfsgerecht und kostenlos an Pflegestellen, die die Last nicht alleine tragen können.</p>
-         </div>
-         <div className="p-8">
-            <Leaf className="w-10 h-10 text-brand-primary mb-6" strokeWidth={1.5} />
-            <h4 className="font-display text-2xl text-brand-black mb-4">Auswilderung</h4>
-            <p className="text-brand-gray text-sm leading-relaxed">Nachdem die Fundtiere/Wildtiere und Pfleglinge aufgepäppelt wurden, werden Sie von den Pflegestellen wieder in die Freiheit entlassen.</p>
-         </div>
+        {/* Right column: Important callout and Call to Action */}
+        <div className="md:col-span-12 lg:col-span-5 space-y-8">
+          {/* Important Callout */}
+          <div className="bg-amber-50/60 border border-amber-200/60 rounded-3xl p-8 text-brand-black shadow-sm relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full translate-x-12 -translate-y-12"></div>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">⚠️</span>
+              <h3 className="text-xl font-display font-semibold text-amber-900">Wichtig:</h3>
+            </div>
+            <p className="text-amber-900/90 leading-relaxed font-body text-sm sm:text-base">
+              Wir sind selbst keine Pflegestelle und nehmen keine Tiere auf. Ebenso übernehmen wir keine Bergungen oder das Päppeln von Tieren. Unser Schwerpunkt liegt ausschließlich auf der Unterstützung bestehender Pflegestellen und Einrichtungen durch Sach- und Futterspenden sowie benötigtes Zubehör.
+            </p>
+          </div>
+
+          {/* Action Box */}
+          <div className="bg-brand-primary text-brand-white rounded-3xl p-8 md:p-10 shadow-sm flex flex-col justify-between">
+            <div>
+              <div className="text-3xl mb-4 font-display">Gemeinsam helfen.</div>
+              <p className="text-brand-white/90 leading-relaxed text-base mb-8">
+                ❤️ Gemeinsam können wir für Tiere in Not einen Unterschied machen.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <Link to="/unterstuetzen" className="w-full active:scale-95 bg-white text-brand-primary text-center font-medium rounded-full py-3.5 px-6 hover:bg-gray-100 transition-all duration-300 shadow-sm cursor-pointer block">
+                Jetzt unterstützen
+              </Link>
+              <Link to="/kontakt" className="w-full active:scale-95 border border-white/20 hover:border-white text-white text-center font-medium rounded-full py-3.5 px-6 transition-all duration-300 cursor-pointer block text-sm">
+                Kontakt aufnehmen
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -838,10 +859,9 @@ export default function App() {
               <p className="mb-6 font-bold text-lg">Wildtier-Hilfe Nord-Bayern mit Herz & Verstand</p>
               
               <p className="mb-6 leading-relaxed">
-                Carmen Körner<br/>
-                Schlesienstrasse 125<br/>
-                OT; Lichteneiche<br/>
-                96117 Memmelsdorf
+                Mirco Peltzer<br/>
+                Wilhelminenweg 3<br/>
+                95512 Neudrossenfeld
               </p>
               
               <h2 className="text-2xl font-display text-brand-black mb-4 mt-8">Kontakt</h2>
